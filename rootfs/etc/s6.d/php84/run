@@ -1,1 +1,3 @@
-
+#!/usr/bin/env sh
+/usr/sbin/php-fpm84
+s6-svscanctl -qz /etc/s6.d
