@@ -54,6 +54,7 @@ RUN apk update && apk add --no-cache \
     php84-zlib \
     su-exec \
     s6 \
+  && ln -s /usr/bin/php84 /usr/bin/php
   && cd /tmp \
   && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
   && sed -i 's/memory_limit = .*/memory_limit = ${PHP_MEMORY_LIMIT}/' /etc/php84/php.ini \
