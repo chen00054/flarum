@@ -28,6 +28,7 @@ RUN apk update && apk add --no-progress --no-cache \
     libcap \
     nginx \
     php84 \
+    php84-cli \
     php84-ctype \
     php84-curl \
     php84-dom \
