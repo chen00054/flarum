@@ -19,7 +19,7 @@ ENV GID=991 \
     LOG_TO_STDOUT=false \
     FLARUM_PORT=8888
 
-RUN apk update && apk add --no-progress --no-cache \
+RUN apk update && apk add --no-cache \
     curl \
     git \
     bash \
