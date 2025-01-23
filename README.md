@@ -9,8 +9,8 @@
 ### Tag available
 
  - **alpha** [(Dockerfile)](https://github.com/chen00054/flarum/tree/master/.github/workflows/alpha.yml)
- - **latest** [(Dockerfile)](https://github.com/chen00054/flarum/tree/master/.github/workflows/latest.yml)
- - **stable** [(Dockerfile)](https://github.com/chen00054/flarum/tree/master/.github/workflows/stable.yml)
+ - **latest** [(Dockerfile)](https://github.com/chen00054/docker-flarum/tree/master/.github/workflows/latest.yml)
+ - **stable** [(Dockerfile)](https://github.com/chen00054/docker-flarum/tree/master/.github/workflows/stable.yml)
 
 ### Features
 
