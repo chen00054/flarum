@@ -80,7 +80,7 @@ docker build -t chen00054/flarum:alpha https://github.com/chen00054/flarum.git
 #### 2 - Docker-compose.yml
 
 ```yml
-version: "3"
+version: "3.9"
 
 services:
   flarum:
