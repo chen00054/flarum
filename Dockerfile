@@ -39,7 +39,7 @@ RUN apk update && apk add --no-progress --no-cache \
     php84-iconv \
     php84-intl \
     php84-mbstring \
-    php84-mysqlnd \
+    php84-mysqli \
     php84-opcache \
     php84-pecl-apcu \
     php84-openssl \
