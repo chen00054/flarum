@@ -2,28 +2,29 @@
 
 ![logo](https://i.imgur.com/Bjrtbsc.png)
 
-[![](https://github.com/chen00054/docker-flarum/workflows/build/badge.svg)](https://github.com/chen00054/docker-flarum/actions)
+[![](https://github.com/chen00054/flarum/workflows/build/badge.svg)](https://github.com/chen00054/flarum/actions)
 [![](https://img.shields.io/docker/pulls/chen00054/flarum)](https://hub.docker.com/r/chen00054/flarum)
 [![](https://img.shields.io/docker/stars/chen00054/flarum)](https://hub.docker.com/r/chen00054/flarum)
 
 ### Tag available
 
- - **latest** [(Dockerfile)](https://github.com/chen00054/docker-flarum/blob/master/Dockerfile)
- - **stable** [(Dockerfile)](https://github.com/chen00054/docker-flarum/blob/master/Dockerfile)
+ - **alpha** [(Dockerfile)](https://github.com/chen00054/flarum/tree/master/.github/workflows/alpha.yml)
+ - **latest** [(Dockerfile)](https://github.com/chen00054/flarum/tree/master/.github/workflows/latest.yml)
+ - **stable** [(Dockerfile)](https://github.com/chen00054/flarum/tree/master/.github/workflows/stable.yml)
 
 ### Features
 
 - Multi-platform image: `linux/386`, `linux/amd64`, `linux/arm/v6`, `linux/arm/v7`, `linux/arm64`
 - Lightweight & secure image
-- Based on Alpine Linux 3.19
-- **nginx** and **PHP 8.2**
-- Latest [Flarum Framework](https://github.com/flarum/framework) (v1.8.5)
+- Based on Alpine Linux 3.21
+- **nginx** and **PHP 8.4**
+- Latest [Flarum Framework](https://github.com/flarum/framework) (v2.0.0-beta.2)
 - MySQL/Mariadb driver
 - OPCache extension configured
 
 ### Build-time variables
 
-- **VERSION** = Version of [flarum/flarum](https://github.com/flarum/flarum) skeleton (default: *v1.8.1*)
+- **VERSION** = Version of [flarum/flarum](https://github.com/flarum/flarum) skeleton (default: *v2.0.0-beta.2*)
 
 ### Ports
 
@@ -73,7 +74,7 @@
 
 ```bash
 # build it manually :
-docker build -t chen00054/flarum:latest https://github.com/chen00054/docker-flarum.git
+docker build -t chen00054/flarum:alpha https://github.com/chen00054/flarum.git
 ```
 
 #### 2 - Docker-compose.yml
@@ -83,7 +84,7 @@ version: "3"
 
 services:
   flarum:
-    image: chen00054/flarum:latest
+    image: chen00054/flarum:alpha
     container_name: flarum
     env_file:
       - /mnt/docker/flarum/flarum.env
@@ -98,7 +99,7 @@ services:
       - mariadb
 
   mariadb:
-    image: mariadb:latest
+    image: mariadb:11.4
     container_name: mariadb
     environment:
       - MYSQL_ROOT_PASSWORD=xxxxxxxxxx
@@ -157,7 +158,7 @@ version: "3"
 
 services:
   flarum:
-    image: chen00054/flarum:latest
+    image: chen00054/flarum:alpha
     container_name: flarum
     environment:
       - PHP_EXTENSIONS=gmp session brotli
@@ -241,8 +242,8 @@ https://getcomposer.org/doc/03-cli.md#modifying-repositories
 
 ### Guide for upgrade your flarum container
 
-See the instructions [here](https://github.com/chen00054/docker-flarum/blob/master/UPGRADE.md)
+See the instructions [here](https://github.com/chen00054/flarum/blob/master/UPGRADE.md)
 
 ## License
 
-Docker image [chen00054/flarum](https://hub.docker.com/r/chen00054/flarum) is released under [MIT License](https://github.com/chen00054/docker-flarum/blob/master/LICENSE).
+Docker image [chen00054/flarum](https://hub.docker.com/r/chen00054/flarum) is released under [MIT License](https://github.com/chen00054/flarum/blob/master/LICENSE).
