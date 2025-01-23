@@ -22,6 +22,8 @@ ENV GID=991 \
 RUN apk update && apk add --no-progress --no-cache \
     curl \
     git \
+    bash \
+    coreutils \
     icu-data-full \
     libcap \
     nginx \
