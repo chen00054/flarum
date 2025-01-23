@@ -3,7 +3,7 @@ FROM alpine:3.19
 LABEL description="Simple forum software for building great communities" \
       maintainer="Magicalex <magicalex@mondedie.fr>"
 
-ARG VERSION=1.8.1
+ARG VERSION=v2.0.0-beta.2
 
 ENV GID=991 \
     UID=991 \
@@ -25,35 +25,35 @@ RUN apk add --no-progress --no-cache \
     icu-data-full \
     libcap \
     nginx \
-    php82 \
-    php82-ctype \
-    php82-curl \
-    php82-dom \
-    php82-exif \
-    php82-fileinfo \
-    php82-fpm \
-    php82-gd \
-    php82-gmp \
-    php82-iconv \
-    php82-intl \
-    php82-mbstring \
-    php82-mysqlnd \
-    php82-opcache \
-    php82-pecl-apcu \
-    php82-openssl \
-    php82-pdo \
-    php82-pdo_mysql \
-    php82-phar \
-    php82-session \
-    php82-tokenizer \
-    php82-xmlwriter \
-    php82-zip \
-    php82-zlib \
+    php84 \
+    php84-ctype \
+    php84-curl \
+    php84-dom \
+    php84-exif \
+    php84-fileinfo \
+    php84-fpm \
+    php84-gd \
+    php84-gmp \
+    php84-iconv \
+    php84-intl \
+    php84-mbstring \
+    php84-mysqlnd \
+    php84-opcache \
+    php84-pecl-apcu \
+    php84-openssl \
+    php84-pdo \
+    php84-pdo_mysql \
+    php84-phar \
+    php84-session \
+    php84-tokenizer \
+    php84-xmlwriter \
+    php84-zip \
+    php84-zlib \
     su-exec \
     s6 \
   && cd /tmp \
   && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-  && sed -i 's/memory_limit = .*/memory_limit = ${PHP_MEMORY_LIMIT}/' /etc/php82/php.ini \
+  && sed -i 's/memory_limit = .*/memory_limit = ${PHP_MEMORY_LIMIT}/' /etc/php84/php.ini \
   && chmod +x /usr/local/bin/composer \
   && mkdir -p /run/php /flarum/app \
   && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /flarum/app \
