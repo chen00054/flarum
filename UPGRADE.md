@@ -1,18 +1,18 @@
 # Guide for upgrade your flarum container
 
-### Upgrade to latest from v1.3.0
+### Upgrade to latest from v2.0.0
 
 :warning: Backup your database, config.php, composer.lock and assets folder  
 :warning: Disable all 3rd party extensions prior to upgrading in panel admin.
 
-1 - Update your docker-compose file, see an example [here](https://github.com/mondediefr/docker-flarum/tree/master#2---docker-composeyml)
+1 - Update your docker-compose file, see an example [here](https://github.com/chen00054/flarum/tree/master#2---docker-composeyml)
 
 ```yml
-version: "3"
+version: "3.9"
 
 services:
   flarum:
-    image: janethan/flarum:latest
+    image: chen00054/flarum:latest
     ...
 
 
@@ -21,7 +21,7 @@ services:
 2 - Pull the last docker images
 
 ```sh
-docker build -t janethan/flarum:latest https://github.com/janethan/docker-flarum.git
+docker build -t chen00054/flarum:latest https://github.com/chen00054/flarum.git
 docker compose up -d flarum    # The current folder where docker-compose.yml is located
 ```
 
